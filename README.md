@@ -1,0 +1,1 @@
+Todo list app created with HTML, CSS, JS, ESLint and Webpack.
