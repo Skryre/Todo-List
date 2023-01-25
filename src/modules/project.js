@@ -1,4 +1,4 @@
-export class Projects {
+export default class Projects {
     constructor(title) {
         this.title = title;
         this.tasks = [];
@@ -34,6 +34,9 @@ export class Projects {
     }
     
     deleteTask(taskTitle) {
-        this.tasks = this.tasks.filter((task) => task.title !== taskTitle)
+        const taskDelete = this.tasks.find(
+          (task) => task.returnTitle() === taskTitle
+        )
+        this.tasks.splice(this.tasks.indexOf(taskDelete), 1)
     }
 }
