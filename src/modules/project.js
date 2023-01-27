@@ -12,7 +12,7 @@ export default class Projects {
         this.dueDate = dueDate
     }
     
-    gettitle() {
+    getTitle() {
         return this.title
     }
     
@@ -21,16 +21,16 @@ export default class Projects {
     }
 
     getTask(taskTitle) {
-        return this.tasks.find((task) => task.gettitle() === taskTitle)
+        return this.tasks.find((task) => task.getTitle() === taskTitle)
       }
     
     contains(taskTitle) {
-        return this.tasks.some((task) => task.gettitle() === taskTitle)
+        return this.tasks.some((task) => task.getTitle() === taskTitle)
     }
     
     addTask(newTask) {
-        if (this.tasks.find((task) => task.gettitle() === newTask.Title)) return
-        this.tasks.push(newTask)
+        if (this.tasks.find((task) => task.getTitle() === newTask.Title)) 
+        return this.tasks.push(newTask)
     }
     
     deleteTask(taskTitle) {

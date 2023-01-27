@@ -13,11 +13,11 @@ export default class TodoList {
     };
     
     returnProject(projectName) {
-        return this.projects.find((project) => project.getName() === projectName)
+        return this.projects.find((project) => project.returnTitle() === projectName)
     }
     
     contains(projectName) {
-        return this.projects.some((project) => project.getName() === projectName)
+        return this.projects.some((project) => project.returnTitle() === projectName)
     }
     
     addProject(newProject) {
